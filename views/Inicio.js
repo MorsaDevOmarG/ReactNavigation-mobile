@@ -1,12 +1,31 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
-const Inicio = () => {
+const Inicio = props => {
+  console.log('props:', props);
+
+  const { navigation } = props;
+  console.log('navigation:', navigation);
+
+  const visitarNosotros = () => {
+    navigation.navigate('Nosotros');
+  };
+
   return (
-    <View>
+    <View style={styles.contenedor}>
       <Text>Inicio</Text>
+
+      <Button title="Ir a Nosotros" onPress={() => visitarNosotros()} />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  contenedor: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default Inicio;
