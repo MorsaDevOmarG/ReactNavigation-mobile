@@ -7,8 +7,16 @@ const Inicio = props => {
   const { navigation } = props;
   console.log('navigation:', navigation);
 
+  const informacion = {
+    clienteId: 123,
+    totalPagar: 500,
+  };
+
   const visitarNosotros = () => {
-    navigation.navigate('Nosotros');
+    // navigation.navigate('Nosotros');
+
+    // Esto pasa informacion a la pantalla Nosotros, se puede enviar cualquier tipo de dato
+    navigation.navigate('Nosotros', informacion);
   };
 
   return (
