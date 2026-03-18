@@ -16,12 +16,28 @@ const App = () => {
     <>
       <NavigationContainer>
         {/* Cada hijo de Stack.Navigator representa una pantalla */}
-        <Stack.Navigator initialRouteName="Inicio">
+
+        {/* 
+          Nota: si deseas que los estilos de una pantalla, como la de INICIO, se apliquen de manera global, puedes configurarlos aquí, sería ponerlos en: Stack.Navigator screenOptions 
+        */}
+        <Stack.Navigator
+          initialRouteName="Inicio"
+          // screenOptions={{
+          //   headerTitleAlign: 'center',
+          //   headerStyle: { backgroundColor: '#f4511e' },
+          //   headerTintColor: '#fff',
+          //   headerTitleStyle: { fontWeight: 'bold' },
+          // }}
+        >
           <Stack.Screen
             name="Inicio"
             component={Inicio}
             options={{
               title: 'Componente Principal',
+              headerTitleAlign: 'center',
+              headerStyle: { backgroundColor: '#f4511e' },
+              headerTintColor: '#fff',
+              headerTitleStyle: { fontWeight: 'bold' },
             }}
           />
 
