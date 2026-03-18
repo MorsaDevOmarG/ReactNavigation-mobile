@@ -1,23 +1,12 @@
-import {
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import React from 'react';
+import { View, Text } from 'react-native';
 
-export const App = () => {
+const App = () => {
   return (
     <>
       <Text>App</Text>
     </>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;
