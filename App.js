@@ -17,9 +17,21 @@ const App = () => {
       <NavigationContainer>
         {/* Cada hijo de Stack.Navigator representa una pantalla */}
         <Stack.Navigator initialRouteName="Inicio">
-          <Stack.Screen name="Inicio" component={Inicio} />
+          <Stack.Screen
+            name="Inicio"
+            component={Inicio}
+            options={{
+              title: 'Componente Principal',
+            }}
+          />
 
-          <Stack.Screen name="Nosotros" component={Nosotros} />
+          <Stack.Screen
+            name="Nosotros"
+            component={Nosotros}
+            options={({ route }) => ({
+              title: `Cliente ID: ${route.params.clienteId}`,
+            })}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
