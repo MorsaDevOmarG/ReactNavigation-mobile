@@ -53,20 +53,21 @@
 
     ```
 
-  - También debemos configurar el archivo: _android/app/build.gradle_ - ```
-    dependencies {
-    // The version of react-native is set by the React Native Gradle Plugin
-    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
-    implementation("com.facebook.react:react-android")
-
-        if (hermesEnabled.toBoolean()) {
-            implementation("com.facebook.react:hermes-android")
-        } else {
-            implementation jscFlavor
+  - También debemos configurar el archivo: _android/app/build.gradle_
+    - ```
+        dependencies {
+        // The version of react-native is set by the React Native Gradle Plugin
+        implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+        implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
+        implementation("com.facebook.react:react-android")
+    
+            if (hermesEnabled.toBoolean()) {
+                implementation("com.facebook.react:hermes-android")
+            } else {
+                implementation jscFlavor
+            }
+    
         }
-
-    }
 
         ```
 
